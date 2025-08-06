@@ -15,9 +15,15 @@ TOKEN_REGEX = [
 ]
 
 KEYWORDS = {
+    'thirumbaVaa' : 'FOR',
+    'irunthuchinaa' : 'IF',
+    'oruvelaIrukumoo' : 'ELIF',
+    'illanaPoo' : 'ELSE',
     'kooptaVaran': 'FUNCTION',
-    'numberuu': 'NUMBER_TYPE',
-    'Vandhutann': 'RETURN',
+    'vandhutann': 'RETURN',
+    'paapomaa' : 'TRY',
+    'aiyoo' : 'EXCEPT',
+    'kadasiyaa' : 'FINALLY',
 }
 
 def tokenize(code):
@@ -39,3 +45,4 @@ def tokenize(code):
         if not match:
             raise SyntaxError(f"Unexpected character: {code[pos]}")
     return tokens
+
